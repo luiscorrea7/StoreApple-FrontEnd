@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --color-esqueleto:#EFF3F5;
+}
+a {
+    text-decoration: none;
+}
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    padding: 76px 0px;
+    background-image: url(../.././assets/background-footer.svg);
+    background-size: cover;
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1250px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box__footer{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.logo img{
+    width: 115px;
+    align-items: center;
+    margin-top: 110px;
+    margin-bottom: -314px;
+    margin-left: 95px;
+}
+
+.logo img{
+    display: flex;
+  }
+
+  .links {
+    height: 25px;
+    width: 25px;
+    margin-left: 6px;
+    margin-right: 12px;
+  }
+
+  .imgInst {
+    width: 40px;
+    margin-top: -12px;
+  }
+  
+  .imgTw {
+    width: 40px;
+    margin-top: -2px;
+  }
+
+  .imgInstt {
+    width: 50px;
+    margin-left: -6px;
+    margin-top: -4px;
+  }
+  .Linkp{
+    margin: 6px;
+  }
+  .imgLin{
+    width: 20px;
+    margin-left: 6px;
+
+  }
+
+  @media screen and (max-width: 1449px) {
+    .logo {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:610px){
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 55px;
+        height: 30vh;
+        margin-top: -210px;
+        margin-right: 89px;
+    }  
+    }
+
+.box__footer .terms{
+    max-width: 330px;
+    margin-top: 33px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+    text-align: center;
+}
+
+.h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+    text-align: -webkit-auto;
+}
+
+.box__footer a{
+    display: flex;
+    text-decoration: none;
+    margin-top: 15px;
+    color: #7a7a7a;
+    font-weight: 600;
+    columns: inherit;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+.box__copyright .imgPagos {
+    width: 200px;
+    height: 60px;
+}
+
+.box__copyright .qrFiscal {
+    width: 80px;
+}
+
+.face:hover {
+    color: rgb(23, 99, 150);
+}
+
+.twitter:hover{
+    color: rgb(11, 38, 190);
+}
+
+.link:hover{
+    color: rgb(2, 4, 95);
+}
+
+.insta:hover{
+    color: rgb(226, 18, 18);
+}
