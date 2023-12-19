@@ -1,5 +1,5 @@
-import '../errorPage/Error404.module.css'
-import {  volver, title, imgError} from '../errorPage/Error404.module.css'
+import './Error404.module.css'
+import {  volver, title, imgError} from './Error404.module.css'
 import { Link } from 'react-router-dom'
 
 
