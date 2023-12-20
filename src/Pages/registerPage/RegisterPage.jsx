@@ -2,9 +2,10 @@ import { Col, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import "../registerPage/RegisterPage.module.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
-
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -13,18 +14,17 @@ const RegisterPage = () => {
   } = useForm()
 
   const validateEmail = async (email) => {
-    const { data } = await axios.get(`http://127.0.0.1:8080/API/users/findByEmail?email=${email}`)
-    return data.email
+    const { data } = await axios.get(`http://127.0.0.1:8080/API/users/findByEmail?email=${email}`);
+    return data
   }
 
   const submitForm = handleSubmit( async (data) => {
     try {
       const emailResp = await validateEmail(data.email);
-      if (data.email === emailResp) {
-        alert('true')
-      } else {
-        alert('false')
-      }
+      if (emailResp === true) return alert('este email ya se encuentra registrado');
+      await axios.post('http://127.0.0.1:8080/API/users/createUser', data);
+      alert('usuario creado con exito');
+      navigate('/')
     } catch (error) {
       console.log(error)
     }
