@@ -9,6 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* Elementos estaticos (Navbar, Footer, etc) afuera de Routes */}
       <Routes>
         {/* Diferentes vistas(Route) adentro de Routes*/}
+        <Route path='/register' element/>
         <Route path='*' element={<Error404/>}/>
       </Routes>
       <FooterAD/>
