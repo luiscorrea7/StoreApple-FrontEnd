@@ -1,6 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import "../registerPage/RegisterPage.module.css";
+import axios from "axios";
 
 const RegisterPage = () => {
 
@@ -11,8 +12,22 @@ const RegisterPage = () => {
     formState: {errors}
   } = useForm()
 
-  const submitForm = handleSubmit((data) => {
-    console.log('form data', data)
+  const validateEmail = async (email) => {
+    const { data } = await axios.get(`http://127.0.0.1:8080/API/users/findByEmail?email=${email}`)
+    return data.email
+  }
+
+  const submitForm = handleSubmit( async (data) => {
+    try {
+      const emailResp = await validateEmail(data.email);
+      if (data.email === emailResp) {
+        alert('true')
+      } else {
+        alert('false')
+      }
+    } catch (error) {
+      console.log(error)
+    }
   })
 
   return (
