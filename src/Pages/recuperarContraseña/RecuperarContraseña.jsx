@@ -42,8 +42,9 @@ import './Style.moduleee.css'
         <Row>
         <h2 className="fw-bold text-center pt-2 mb-4 ">Ingrese su Correo</h2>
           <div className="mb-1">
-            <label htmlFor="email" className="form-label">Correo</label><br />
+            <label htmlFor="email" className="form-label" >Correo</label><br />
             <input 
+              placeholder="Ingrese su correo para recuperar su contraseña"
               required
               type="email" 
               name="email" 
