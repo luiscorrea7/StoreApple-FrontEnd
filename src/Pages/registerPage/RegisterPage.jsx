@@ -1,36 +1,45 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import "../registerPage/RegisterPage.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const RegisterPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const API_URL = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     watch,
     formState: {errors}
-  } = useForm()
+  } = useForm();
 
   const validateEmail = async (email) => {
-    const { data } = await axios.get(`http://127.0.0.1:8080/API/users/findByEmail?email=${email}`);
+    const { data } = await axios.get(`${API_URL}/users/findByEmail?email=${email}`);
     return data
   }
 
   const submitForm = handleSubmit( async (data) => {
     try {
+      setIsLoading(true)
       const emailResp = await validateEmail(data.email);
       if (emailResp === true) return alert('este email ya se encuentra registrado');
-      await axios.post('http://127.0.0.1:8080/API/users/createUser', data);
-      alert('usuario creado con exito');
-      navigate('/')
+      await axios.post(`${API_URL}/users/createUser`, data);
     } catch (error) {
       console.log(error)
+    } finally  {
+      setIsLoading(false)
     }
   })
-
   return (
+    isLoading === true
+    ?
+    <Spinner animation="border" role="status">
+    <span className="visually-hidden">Loading...</span>
+    </Spinner>
+    :
     <form onSubmit={submitForm}>
       <Row className="justify-content-center g-0">
 
@@ -142,10 +151,9 @@ const RegisterPage = () => {
         </Col>
 
         <Col xs={10} md={8} className="d-flex flex-column align-items-center mt-3">
-          <input type="submit" />
+          <input type="submit" value="Registrarse"/>
         </Col>
 
-        
       </Row>
 
     </form>
