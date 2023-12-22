@@ -4,6 +4,7 @@ import "../registerPage/RegisterPage.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Swal from 'sweetalert2'
 
 const RegisterPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,8 +26,19 @@ const RegisterPage = () => {
     try {
       setIsLoading(true)
       const emailResp = await validateEmail(data.email);
-      if (emailResp === true) return alert('este email ya se encuentra registrado');
+      if (emailResp === true) return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Este correo ya se encuentra registrado",
+      });
       await axios.post(`${API_URL}/users/createUser`, data);
+      Swal.fire({
+        icon: "success",
+        title: "Registrado con exito",
+        showConfirmButton: true,
+      });
+      localStorage.setItem('UserLog', true)
+      navigate('/')
     } catch (error) {
       console.log(error)
     } finally  {
