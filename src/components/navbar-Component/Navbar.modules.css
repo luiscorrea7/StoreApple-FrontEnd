@@ -1,0 +1,132 @@
+.Navbar{
+    background-color: #E2E2E2!important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 5px 10%;
+    font-size: 20px;
+    position: sticky;
+    top: 0px;
+}
+
+.t-1{
+    align-items: center;
+
+}
+
+.opacity {
+    background: #E2E2E2;
+    opacity: 1;
+    width: 100%;
+}
+
+.color-stor {
+    color:  rgb(56, 55, 55);
+}
+
+.color-stor:hover {
+    color:  rgb(12, 12, 12);
+}
+
+.colorSS{
+    color: rgb(56, 55, 55);
+    font-weight: bold;
+}
+
+.colorSS:hover{
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+}
+
+.color-toggle {
+    color: gray;
+}
+
+.img-Logo{
+    height: 40px;
+    width: auto;
+    margin: 10px;
+    align-items: center;
+}
+
+.buscar{
+    padding: 5px;
+    align-items: center;
+    background-color: #E1E1E1;
+}
+
+.buscar input{
+    width: 200px;
+    height: 35px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid #C3CCDF;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn-1{
+    top: 0px;
+    right: 0;
+    background: #E1E1E1;
+    padding: 0px;
+    width: 30px;
+    height: 25px;
+    line-height: 55px;
+    padding-top: 5px;
+    text-align: center;
+    color: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* .buscar:hover input{
+    width: 150px;
+} */
+
+.btn{
+    background-color: #dfe9ff8c;
+    border: none;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #c3ccdf;
+    color: rgba(0, 0, 0, 0.808);
+}
+
+@media screen and (max-width:990px) {
+    .img-Logo{
+        display: none;
+    }
+    .opacity {
+        background: #E2E2E2;
+        margin-top: 20px;
+        opacity: 1;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        width: 100%;
+        z-index: 3;
+    }
+}
+.color-toggle {
+    color: gray;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgba(0, 0, 0, 0.801);
+}
+
+.info-2{
+    color: #cfd6e6;
+    border-radius: 10px;
+}
+
+.info-2:hover{
+    background-color: #C3CCDF;
+    color: rgba(0, 0, 0, 0.808);
+}
