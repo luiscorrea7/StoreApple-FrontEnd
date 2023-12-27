@@ -58,6 +58,7 @@ const RegisterPage = () => {
       <Row className="justify-content-center g-0">
 
         <Col xs={10} md={8} className="d-flex flex-column align-items-center">
+          <h2 className="m-3 font">Registrate</h2>
           <label htmlFor="userName">Nombre de usuario</label>
           <input type="text"
           className="form-est"
