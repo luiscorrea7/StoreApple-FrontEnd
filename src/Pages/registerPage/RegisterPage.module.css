@@ -1,8 +1,40 @@
 
-input {
-  width: 100%;
+:root{
+  --color-secundario: #E2E2E2;
+  --color-terciario: #50738369;
+  --color-letra: #161515;
+  --color-boton: #50738369;
+  --color-boton-foco: #78adbdab;
+}
+.entrada-login {
+  background: var(--color-terciario);
+  border: none;
+  border-radius: 50px;
+  color: white;
 }
 
+.boton-login {
+  background-color: var(--color-boton);
+  color: var(--color-letra);
+  border-radius: 15px;
+}
+.entrada-login:focus{
+  border-color: #000000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(93, 78, 142, 0.6);
+}
+
+.boton-login:hover{
+  background-color: var(--color-boton-foco);
+  color: var(--color-letra);
+}
+
+input {
+  width: 100%;
+  background-color: var(--color-boton-foco);
+  color: var(--color-letra);
+  border-radius: 15px;
+  margin: 5px;
+}
 
 @media only screen and (min-width: 992px) { 
   input {
