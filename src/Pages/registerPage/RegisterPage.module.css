@@ -4,7 +4,7 @@
   --color-terciario: #50738369;
   --color-letra: #161515;
   --color-boton: #50738369;
-  --color-boton-foco: #5aa4bbb2;
+  --color-boton-foco: #78adbdab;
 }
 .entrada-login {
   background: var(--color-terciario);
