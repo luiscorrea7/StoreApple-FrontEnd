@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FooterAD } from './components/footerPage/FooterAD.modules'
 import Error404 from './Pages/errorPage/Error404.module';
 import RegisterPage from './Pages/registerPage/RegisterPage';
+import RecuperarContraseña from './Pages/recupContraseña/RecuperarContraseña';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* Diferentes vistas(Route) adentro de Routes*/}
         <Route path='/register' element={<RegisterPage/>}/>
         <Route path='*' element={<Error404/>}/>
+        <Route path='/RecCont' element={<RecuperarContraseña/>}/>
       </Routes>
       <FooterAD/>
     </BrowserRouter>

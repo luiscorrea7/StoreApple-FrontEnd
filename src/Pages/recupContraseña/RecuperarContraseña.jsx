@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import './Style.moduleee.css'
+import './RecuperarCont.module.css'
 
     const RecuperarContraseña = () => {
   const urlBackend = import.meta.env.VITE_BASE_URL;
