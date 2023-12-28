@@ -56,8 +56,10 @@ const RegisterPage = () => {
       <Row className="justify-content-center g-0">
 
         <Col xs={10} md={8} className="d-flex flex-column align-items-center">
+          <h2 className="mt-5 mb-4 fw-bold">Registrate</h2>
           <label htmlFor="userName">Nombre de usuario</label>
           <input type="text"
+          className="entrada-login"
             {... register("userName",
             {
               required: {
@@ -86,7 +88,8 @@ const RegisterPage = () => {
         <Col xs={10} md={8} className="d-flex flex-column align-items-center">
           <label htmlFor="email">Correo</label>
           <input type="email"
-            {... register("email",
+          className="entrada-login"
+          {... register("email",
             {
               required: {
                 value: true,
@@ -106,6 +109,7 @@ const RegisterPage = () => {
         <Col xs={10} md={8} className="d-flex flex-column align-items-center">
           <label htmlFor="password">Contraseña</label>
           <input type="password"
+          className="entrada-login"
             {... register("password",
             {
               required: {
@@ -122,9 +126,9 @@ const RegisterPage = () => {
             errors.password && <span>{errors.password.message}</span>
           }
           <p>
-            La contraseña debe tener al menos.<br/>
+            La contraseña debe tener al menos.
             Una letra mayuscula.<br/> 
-            Una letra minuscula.<br/>
+            Una letra minuscula.
             Un caracter numerico.
           </p>
         </Col>
@@ -132,6 +136,7 @@ const RegisterPage = () => {
         <Col xs={10} md={8} className="d-flex flex-column align-items-center">
           <label htmlFor="repeatPassword">Repetir contraseña</label>
           <input type="password"
+          className="entrada-login"
             {... register("repeatPassword", 
             {
               required: {
@@ -149,6 +154,7 @@ const RegisterPage = () => {
         <Col xs={10} md={8} className="d-flex flex-column align-items-center">
           <label htmlFor="termsAndCons">Acepto terminos y condiciones</label>
           <input type="checkbox"
+          className="entrada-login"
             {... register("termsAndCons",
             {
               required: {
@@ -163,7 +169,7 @@ const RegisterPage = () => {
         </Col>
 
         <Col xs={10} md={8} className="d-flex flex-column align-items-center mt-3">
-          <input type="submit" value="Registrarse"/>
+          <input type="submit" value="Registrarse" className="boton-login"/>
         </Col>
 
       </Row>

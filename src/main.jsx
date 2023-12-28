@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FooterAD } from './components/footerPage/FooterAD.modules'
 import Error404 from './Pages/errorPage/Error404.module';
-import RegisterPage from './pages/registerPage/RegisterPage';
+import RegisterPage from './Pages/registerPage/RegisterPage';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
