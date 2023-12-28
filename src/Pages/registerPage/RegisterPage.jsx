@@ -154,7 +154,6 @@ const RegisterPage = () => {
         <Col xs={10} md={8} className="d-flex flex-column align-items-center">
           <label htmlFor="termsAndCons">Acepto terminos y condiciones</label>
           <input type="checkbox"
-          className="entrada-login"
             {... register("termsAndCons",
             {
               required: {

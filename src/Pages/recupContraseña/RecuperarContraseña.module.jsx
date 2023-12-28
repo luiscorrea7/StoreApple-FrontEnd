@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import './RecuperarCont.module.css'
+import './../recupContraseña/RecuperarCont.modules.css'
 
     const RecuperarContraseña = () => {
   const urlBackend = import.meta.env.VITE_BASE_URL;
@@ -44,11 +44,11 @@ import './RecuperarCont.module.css'
           <div className="mb-1">
             <label htmlFor="email" className="form-label" >Correo</label><br />
             <input 
+              className=" logiin" 
               placeholder="Ingrese su correo para recuperar su contraseña"
               required
               type="email" 
               name="email" 
-              className="form-control entrada-login" 
               id="email" 
               {...register("email", { 
                 required: "Debe ingresar un correo.",
@@ -63,7 +63,7 @@ import './RecuperarCont.module.css'
             <br />
           </div>
           <Col md={4} xs={6} lg={6} className="d-grid gap-2 mx-auto">
-            <button type="submit" className="btn boton-login" >Enviar</button>
+            <button type="submit" className="btn mt-4 boton-login" >Enviar</button>
           </Col>
         </Row>
        </form>

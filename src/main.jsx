@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FooterAD } from './components/footerPage/FooterAD.modules'
 import Error404 from './Pages/errorPage/Error404.module';
 import RegisterPage from './Pages/registerPage/RegisterPage';
-import RecuperarContraseña from './Pages/recupContraseña/RecuperarContraseña';
+import RecuperarContraseña from './Pages/recupContraseña/RecuperarContraseña.module';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
