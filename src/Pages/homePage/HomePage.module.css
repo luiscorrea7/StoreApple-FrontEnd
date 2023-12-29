@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  .sectionHome {
+    background-image: url("/src/assets/img8.jpg");
+    background-size: cover;  
+    
+  }
+  /* main section {
+  } */
+  .imgSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    width: 100%;
+    /* margin-top: 90px; */
+    padding-bottom: 90px;
+    padding-top: 30px;
+    backdrop-filter: blur(4px);
+  }
+  .logoSection {
+    background-color: rgba(8, 1, 1, 0.324);
+    color: white;
+    justify-content: start;
+    backdrop-filter: blur(10px); 
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+  }
+  .imgLogo{
+    width: 200px;
+    height: 200px;
+  }
+  .logoSection p {
+    width: 300px;
+    height: 200px;
+  }
+  .h2Letra{
+    background-color: rgba(255, 255, 255, 0.158);
+    border-radius: 20px;
+    width: 200px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: 2s ease-in-out;
+  }
+  .h2:hover { 
+    background-color: rgba(0, 0, 0, 0.338);
+  }
+  .slider {
+    width: 1200px;
+    height: 530px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .slider img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    /* opacity: 50%; */
+    transition: .5s ease;
+  }
+  .roundedImg1 {
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px;
+  }
+  .roundedImg2 {
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+  }
+  .slider img:hover {
+    cursor: crosshair;
+    width: 330px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+  .wave img {
+    background-size: 200%;
+    opacity: 20%;
+    width: 100%;
+    height: 90px;
+  }
+  
+  .wave {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: -2px;
+    height: 100px;
+    background-image: url(/src/assets/wave.png);
+    background-size: 100% 100%;
+    animation: wave 40s linear infinite;
+    position: sticky;
+  }
+  
+  @keyframes wave {
+    0% {
+      background-position-x: 0;
+    }
+  
+    50% {
+      background-position-x: 1000px;
+    }
+  
+    100% {
+      background-position-x: 0px;
+    }
+  }
+  .cardsSection {
+    display: flex;
+    justify-content: space-evenly;  
+  }
+  .borderRow {
+    border-radius: 20px;
+  }
+
+  
+  @media screen and (max-width:600px) {
+    .slider {
+        width: 370px;
+        height: 430px;
+        display: flex;
+        overflow-x: scroll;
+        margin: auto;
+    }
+    .slider img {
+        width: 300px;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+    }
+    .imgSection {
+      width: 100%;
+    }
+    .logoSection {
+        background-color: rgba(8, 1, 1, 0.324);
+        color: white;
+        backdrop-filter: blur(5px); 
+        width: 350px;
+        justify-content: center;
+    }
+    .logoSection2 {
+      display: none;
+    }
+  }
