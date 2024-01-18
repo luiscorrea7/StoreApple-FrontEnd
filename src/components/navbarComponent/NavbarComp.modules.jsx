@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Container, Modal, Nav, Navbar } from 'react-bootstrap';
-import '../navbar-Component/Navbar.modules.css';
+import '../navbarComponent/Navbar.modules.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
